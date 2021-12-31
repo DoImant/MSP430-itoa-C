@@ -79,7 +79,6 @@ char* uitoa32(char* const buffer, uint32_t val) {
 //////////////////////////////////////////////////////////////////////////////
 
 void itoa32nb( fP putChar, int32_t val) {
-
     uint32_t divisor = 1;
 
     if (val < 0) {              // ist die Zahl negativ?
