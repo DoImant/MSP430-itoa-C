@@ -42,7 +42,7 @@ independently of the two functions.
 This function is required for the first four itoa functions that use a string buffer. Because the ASCII characters  
 are generated in reverse order, the characters must be rearranged with the help of this function.  
   
-## main.can
+## main.c
   
 The main.c file contains a sample code to demonstrate the itoa32 function.
 A serial console (9600,8,N,1) is required through which the letter "a" must be entered.
