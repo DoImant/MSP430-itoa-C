@@ -1,6 +1,6 @@
 
 //////////////////////////////////////////////////////////////////////////////
-/// @file itos.c
+/// @file itoa32.c
 /// @author Kai R. 
 /// @brief Hilfsfunktionen zum Ausgeben von Integerwerten über eine serielle
 ///        Schnittstelle (Terminal). Diese Funktionen wurden hinsichtlich des 
