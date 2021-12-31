@@ -2,7 +2,7 @@
 /// @file main.c
 /// @author Kai R. 
 /// @brief Example program for a UART transmission, the auxiliary functions 
-///        itos() or uitos() can be used to output numbers.
+///        itoaxx() or uitoaxx() can be used to output numbers.
 /// 
 /// @date 2021-12-23
 /// @version 0.1
@@ -13,17 +13,18 @@
 #include <stdint.h>
 #include "msp430g2553.h"
 #include "itoa16.h"
+#include "itoa32.h"
 
 // ------------------ Definitions ----------------------------------------------
 
-
+#define VARIANTE3
 #define DCO_01_MHZ
 //#define DCO_16_MHZ
 
 // ----------------- Gl. Variables --------------------------------------------- 
 volatile unsigned char rcv;
 
-// ------------------ PROTOTYPEN -----------------------------------------------
+// ------------------ PROTOTYPES -----------------------------------------------
 
 void UART_init(void);                         // Initialize UART-Modul UCA0
 void UART_send_string(const char* str);       // Send String via UCA0
@@ -32,6 +33,8 @@ void UART_send_char(const char);
 #else
 void UART_send_int(long val);                 // Send integer (converted to string) via UCA0
 #endif
+
+// ------------------ PROGRAM --------------------------------------------------
 
 void main(void)
 {

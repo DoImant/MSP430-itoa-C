@@ -24,7 +24,7 @@ extern "C" {
 /// @brief Wandelt eine (signed) Integer Zahl in einen String um
 /// 
 /// @param buffer    Zeiger auf Puffers zum Speichern der ASCII-Daten
-/// @param val    Integer Wert der umgewandelt werden soll
+/// @param val       Integer Wert der umgewandelt werden soll
 //////////////////////////////////////////////////////////////////////////////
 
 char* itoa32(char* const buffer, int32_t val) {
@@ -56,7 +56,7 @@ char* itoa32(char* const buffer, int32_t val) {
 /// @brief Wandelt eine (unsigned) Integer Zahl in einen String um
 /// 
 /// @param buffer    Zeiger auf Puffers zum Speichern der ASCII-Daten
-/// @param val    Integer Wert der umgewandelt werden soll
+/// @param val       Integer Wert der umgewandelt werden soll
 //////////////////////////////////////////////////////////////////////////////
 
 char* uitoa32(char* const buffer, uint32_t val) {
