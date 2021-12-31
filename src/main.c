@@ -63,7 +63,7 @@ void main(void)
       rcv = 0x00;                     // Reset received data
       UART_send_string("Zahl: ");     // Send number
 #ifdef VARIANTE3
-      itoa16nb(&UART_send_char, count++);
+      uitoa16nb(&UART_send_char, count++);
 #else
       UART_send_int(count++);
 #endif 

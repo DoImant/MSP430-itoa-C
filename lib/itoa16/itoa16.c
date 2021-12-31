@@ -108,21 +108,22 @@ void itoa16nb( fP putChar, int16_t val) {
 //////////////////////////////////////////////////////////////////////////////
 
 void uitoa16nb( fP putChar, uint16_t val) {
-    uint16_t divisor = 1;
+  static const uint16_t divisor[5] = {1,10,100,1000,10000};
+  uint8_t divIdx = 0;
 
-    while (val/divisor > BASE) { divisor *= BASE; }
-
-    do {                                        // Schleife über alle  Dez Stellen
-     if(divisor == 1) {                         // wenn die 1er behandelt werden
-        putChar('0' + (char)(val));
+  while( (val >= (divisor[divIdx+1])) && (divIdx < MAX_DIVIDX)) { divIdx++; }
+     
+  do {                               // Schleife über alle  Dez Stellen
+     if(!divIdx) {                   // wenn die 1er behandelt werden
+        putChar('0' + (char)(val));  
      }
-     else {                                    // bei allen Stellen ausser bei den 1ern
-        putChar('0' + (char)(val / divisor));  // val/dec Der Quotient (digit) an die Output Funktion schicken
-        val  %= divisor;                       // Ursprungswert auf den Rest der Division setzen
+     else {                          // bei allen Stellen ausser bei den 1ern
+        putChar('0' + (char)(val / divisor[divIdx]));  // val/dec Der Quotient (digit) an die Output Funktion schicken
+        val  %= divisor[divIdx];     // Ursprungswert auf den Rest der Division setzen
      }
-     divisor /= BASE;
-  } while (divisor);
+  } while (divIdx--);                // Weiter mit der nächsten Dez Stelle 
 }
+
 #ifdef __cplusplus
 }
 #endif //__cplusplus

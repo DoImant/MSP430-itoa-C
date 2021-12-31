@@ -108,19 +108,19 @@ void itoa32nb( fP putChar, int32_t val) {
 //////////////////////////////////////////////////////////////////////////////
 
 void uitoa32nb( fP putChar, uint32_t val) {
-    uint32_t divisor = 1;
+  uint32_t divisor = 1;
 
-    while (val/divisor > BASE_L) { divisor *= BASE_L; }
+  while (val/divisor > BASE_L) { divisor *= BASE_L; }
 
-    do {                                        // Schleife über alle  Dez Stellen
-     if(divisor == 1) {                         // wenn die 1er behandelt werden
-        putChar('0' + (char)(val));
-     }
-     else {                                    // bei allen Stellen ausser bei den 1ern
-        putChar('0' + (char)(val / divisor));  // val/dec Der Quotient (digit) an die Output Funktion schicken
-        val  %= divisor;                       // Ursprungswert auf den Rest der Division setzen
-     }
-     divisor /= BASE_L;
+  do {                                        // Schleife über alle  Dez Stellen
+    if(divisor == 1) {                         // wenn die 1er behandelt werden
+      putChar('0' + (char)(val));
+    }
+    else {                                    // bei allen Stellen ausser bei den 1ern
+      putChar('0' + (char)(val / divisor));  // val/dec Der Quotient (digit) an die Output Funktion schicken
+      val  %= divisor;                       // Ursprungswert auf den Rest der Division setzen
+    }
+    divisor /= BASE_L;
   } while (divisor);
 }
 
