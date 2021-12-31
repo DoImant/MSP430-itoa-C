@@ -4,7 +4,7 @@
 /// @author Kai R. 
 /// @brief Hilfsfunktionen zum Ausgeben von Integerwerten über eine serielle
 ///        Schnittstelle (Terminal). Diese Funktionen wurden hinsichtlich des 
-///        Speicherverbrauchs optimiert und funktioniert für Werte bis 32 Bit
+///        Speicherverbrauchs optimiert und funktionieren für Werte bis 32 Bit
 /// 
 /// @date 2021-12-24
 /// @version 1.0
@@ -23,7 +23,7 @@ extern "C" {
 //////////////////////////////////////////////////////////////////////////////
 /// @brief Wandelt eine (signed) Integer Zahl in einen String um
 /// 
-/// @param buffer    Zeiger auf Puffers zum Speichern der ASCII-Daten
+/// @param buffer    Zeiger auf einen Puffer zum Speichern der ASCII-Daten
 /// @param val       Integer Wert der umgewandelt werden soll
 //////////////////////////////////////////////////////////////////////////////
 
@@ -55,7 +55,7 @@ char* itoa32(char* const buffer, int32_t val) {
 //////////////////////////////////////////////////////////////////////////////
 /// @brief Wandelt eine (unsigned) Integer Zahl in einen String um
 /// 
-/// @param buffer    Zeiger auf Puffers zum Speichern der ASCII-Daten
+/// @param buffer    Zeiger auf einen Puffer zum Speichern der ASCII-Daten
 /// @param val       Integer Wert der umgewandelt werden soll
 //////////////////////////////////////////////////////////////////////////////
 

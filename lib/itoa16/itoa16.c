@@ -4,7 +4,7 @@
 /// @author Kai R. 
 /// @brief Hilfsfunktionen zum Ausgeben von Integerwerten über eine serielle
 ///        Schnittstelle (Terminal). Diese Funktionen wurden hinsichtlich des 
-///        Speicherverbrauchs optimiert und funktioniert für Werte bis 16 Bit
+///        Speicherverbrauchs optimiert und funktionieren für Werte bis 16 Bit
 /// 
 /// @date 2021-12-31
 /// @version 1.0
