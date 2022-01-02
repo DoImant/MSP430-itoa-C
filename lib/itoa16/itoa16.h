@@ -10,8 +10,6 @@ extern "C" {
 
 #define MAX_DIVIDX 4
 #define BASE 10U
-#define BUFFER_SIZE  7U
-//#define DIVISOR 10000       // Größtmöglicher Divisor bei 16Bit
 
 // Deklaration eines Funktionszeigers   
 typedef  void (*fP)(const char c);

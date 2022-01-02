@@ -9,9 +9,8 @@ extern "C" {
 #endif //__cplusplus
 
 #define BASE_L 10UL
-#define BUFFER_SIZE_L 12U
 
-// Deklaration eines Funktionszeigers   
+// declaration of a function pointer.
 typedef  void (*fP)(const char c);
 
 extern char* itoa32(char* const buffer, int32_t val);
